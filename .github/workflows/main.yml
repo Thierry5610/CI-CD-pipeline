@@ -1,0 +1,36 @@
+name: CI/CD with Postman Testing
+
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  test:
+    runs-on: windows
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.15.1'  
+
+      - name: Install dependencies
+        run: |
+          npm install -g newman  # Install Newman globally
+
+      - name: Run Postman tests
+        run: |
+          newman run postman/collection.json -r cli,html --reporters-cli-no-summary --reporters-html-export newman-report.html
+
+      - name: Upload Newman HTML Report as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: newman-report
+          path: newman-report.html
