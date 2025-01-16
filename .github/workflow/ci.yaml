@@ -34,9 +34,9 @@ jobs:
             --reporters-cli-no-summary \
             --reporters-html-export newman-report.html
 
-      # Step 5: Upload Newman report as an artifact
+      # Step 5: Upload Newman report as an artifact (updated to v3)
       - name: Upload Newman HTML Report as Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: newman-report
           path: newman-report.html
