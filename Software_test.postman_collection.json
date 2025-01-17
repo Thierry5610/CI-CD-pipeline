@@ -1,66 +1,40 @@
 {
 	"info": {
-		"_postman_id": "8b3dd504-9eb0-4e43-b7f7-8b7bd0b2e9cf",
-		"name": "Software_test",
+		"_postman_id": "40d056f0-f2e7-4da7-b0ff-d08cae49b00e",
+		"name": "Software quality tools",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38480989"
+		"_exporter_id": "31852121"
 	},
 	"item": [
 		{
-			"name": "GetRequest",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
+			"name": "Get tutorials",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
-					"protocol": "http",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials",
+					"protocol": "https",
 					"host": [
-						"https://node-deploy-group-9.onrender.com"
+						"node-deploy-group-9",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
-						"tutorials",
-						""
+						"tutorials"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "User_Auth",
+			"name": "Add tutorials",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdhZTFmZDhiY2Q4YmVlYjMzNDMyZiIsImlhdCI6MTczNjk1NTgxNywiZXhwIjoxNzM2OTU5NDE3fQ.CLeZ2EQoe1NmgP4baih95NKwLyN77Wco_lkS9n6FpOI",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"username\": \"testuser0\",\r\n  \"email\": \"testuser0@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+					"raw": "    {\r\n        \"title\": \"Introduction to React Native Components\",\r\n        \"description\": \"Learn the basics of building reusable components in React, including functional and class components, props, and state.\",\r\n        \"published\": true\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,318 +42,51 @@
 					}
 				},
 				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/auth/login",
-					"protocol": "http",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials",
+					"protocol": "https",
 					"host": [
-						"https://node-deploy-group-9.onrender.com"
+						"node-deploy-group-9",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
-						"auth",
-						"login"
+						"tutorials"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Create Tutorials",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
+			"name": "Delete tutorial",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdkYWY5ZDhiY2Q4YmVlYjMzNDM0ZSIsImlhdCI6MTczNjk1NjgxNSwiZXhwIjoxNzM2OTYwNDE1fQ.ceIPJpn-Rxkz5ZDxG9XVIjVCmrj2JmkhsC2HjiOQhBY",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "\r\n{\r\n  \"title\": \"Learn Javascript\",\r\n  \"description\": \"A beginner's guide to React\",\r\n  \"published\": true\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
-					"protocol": "http",
-					"host": [
-						"https://node-deploy-group-9.onrender.com"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"tutorials",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Single task",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdkYWY5ZDhiY2Q4YmVlYjMzNDM0ZSIsImlhdCI6MTczNjk1NjgxNSwiZXhwIjoxNzM2OTYwNDE1fQ.ceIPJpn-Rxkz5ZDxG9XVIjVCmrj2JmkhsC2HjiOQhBY",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6787d7f8d8bcd8beeb334344",
-					"protocol": "http",
-					"host": [
-						"https://node-deploy-group-9.onrender.com"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"tutorials",
-						"6787d7f8d8bcd8beeb334344"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Tutorial",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdkYWY5ZDhiY2Q4YmVlYjMzNDM0ZSIsImlhdCI6MTczNjk1NjgxNSwiZXhwIjoxNzM2OTYwNDE1fQ.ceIPJpn-Rxkz5ZDxG9XVIjVCmrj2JmkhsC2HjiOQhBY",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Test by anon\",\r\n  \"description\": \"A beginner's guide to Node.js\",\r\n  \"published\": true\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6787d7f8d8bcd8beeb334344",
-					"protocol": "http",
-					"host": [
-						"https://node-deploy-group-9.onrender.com"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"tutorials",
-						"6787d7f8d8bcd8beeb334344"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Tutorials",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdhZTFmZDhiY2Q4YmVlYjMzNDMyZiIsImlhdCI6MTczNjk1NTgxNywiZXhwIjoxNzM2OTU5NDE3fQ.CLeZ2EQoe1NmgP4baih95NKwLyN77Wco_lkS9n6FpOI",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/673487dc7bdb62a31daf5161",
-					"protocol": "http",
-					"host": [
-						"https://node-deploy-group-9.onrender.com"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"tutorials",
-						"673487dc7bdb62a31daf5161"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Invalid Token(Security test)",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Should return 401 for invalid token\", function () {\r",
-							"    pm.expect(pm.response.code).to.eql(401);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "qsjkj",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
-					"protocol": "http",
-					"host": [
-						"https://node-deploy-group-9.onrender.com"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"tutorials",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "No auth header(security test)",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
-					"protocol": "http",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/673486907bdb62a31daf5157",
+					"protocol": "https",
 					"host": [
-						"https://node-deploy-group-9.onrender.com"
+						"node-deploy-group-9",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"tutorials",
-						""
+						"673486907bdb62a31daf5157"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "SQL injection test",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"SQL Injection is prevented\", function () {\r",
-							"    // Check if the response code is 400 (Bad Request) or other error code\r",
-							"    pm.expect(pm.response.code).to.be.oneOf([400, 500]);\r",
-							"    \r",
-							"    // Check that no table is being dropped (This can be checked by monitoring the database or using custom logic)\r",
-							"    pm.expect(pm.response.text()).to.not.include(\"DROP TABLE\");\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
+			"name": "Update tutorial Copy",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdhZTFmZDhiY2Q4YmVlYjMzNDMyZiIsImlhdCI6MTczNjk1NTgxNywiZXhwIjoxNzM2OTU5NDE3fQ.CLeZ2EQoe1NmgP4baih95NKwLyN77Wco_lkS9n6FpOI",
-						"type": "text"
-					}
-				],
+				"method": "PUT",
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"' OR 1=1; DROP TABLE tutorials; --\",\r\n  \"description\": \"Malicious payload\"\r\n}",
+					"raw": "    {\r\n        \"title\": \"Getting Started with Sassy CSS\",\r\n        \"description\": \"This guide introduces Sassy CSS and shows how to set up a project, customize the design, and apply utility-first styling.\",\r\n        \"published\": false\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -387,79 +94,21 @@
 					}
 				},
 				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
-					"protocol": "http",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6734878d7bdb62a31daf515f",
+					"protocol": "https",
 					"host": [
-						"https://node-deploy-group-9.onrender.com"
+						"node-deploy-group-9",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"tutorials",
-						""
+						"6734878d7bdb62a31daf515f"
 					]
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "Invalid id(Negative test)",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODdhZTFmZDhiY2Q4YmVlYjMzNDMyZiIsImlhdCI6MTczNjk1NTgxNywiZXhwIjoxNzM2OTU5NDE3fQ.CLeZ2EQoe1NmgP4baih95NKwLyN77Wco_lkS9n6FpOI",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6787d7f8d8bcd8beeb334",
-					"protocol": "http",
-					"host": [
-						"https://node-deploy-group-9.onrender.com"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"tutorials",
-						"6787d7f8d8bcd8beeb334"
-					]
-				}
-			},
-			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "accesstoken",
-			"value": "",
-			"type": "string"
 		}
 	]
 }
