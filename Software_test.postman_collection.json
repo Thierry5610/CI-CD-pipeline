@@ -29,10 +29,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -68,10 +68,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/auth/login",
+					"raw": "https://node-deploy-group-9.onrender.com/api/auth/login",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -121,10 +121,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -165,10 +165,10 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/6787d7f8d8bcd8beeb334344",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6787d7f8d8bcd8beeb334344",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -218,10 +218,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/6787d7f8d8bcd8beeb334344",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6787d7f8d8bcd8beeb334344",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -262,10 +262,10 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/673487dc7bdb62a31daf5161",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/673487dc7bdb62a31daf5161",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -306,10 +306,10 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -330,10 +330,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -387,10 +387,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
@@ -417,10 +417,10 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/tutorials/6787d7f8d8bcd8beeb334",
+					"raw": "https://node-deploy-group-9.onrender.com/api/tutorials/6787d7f8d8bcd8beeb334",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"https://node-deploy-group-9.onrender.com"
 					],
 					"port": "8080",
 					"path": [
