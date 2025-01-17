@@ -28,6 +28,7 @@ jobs:
         run: npm install -g newman  # Install Newman globally
 
       # Step 4: Run Postman tests
+      - name: Run Postman tests
         run: |
           newman run postman/collection.json -r cli,html \
             --reporters-cli-no-summary \
